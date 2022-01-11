@@ -4,7 +4,12 @@
 
 #include "first_app.hpp"
 
+#ifdef WINDOWS_BUILD
+#include <windows.h>
+int wmain(void)
+#else
 int main(void)
+#endif
 {
   vulkan::FirstApp app{};
 
